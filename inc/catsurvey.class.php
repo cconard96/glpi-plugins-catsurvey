@@ -19,12 +19,12 @@ class PluginCatsurveyCatsurvey extends CommonDBTM {
              case 'createinquestbycat' :
                  return array('description' => 'Génération des enquêtes de satisfaction par catégories');
         }
-        return array();
+        return [];
     }
 
     static function cronCreateInquestByCat($task) {
       global $DB;
-
+      
       $conf        = new self();
       $inquest     = new TicketSatisfaction();
       $tot         = 0;
@@ -179,9 +179,7 @@ class PluginCatsurveyCatsurvey extends CommonDBTM {
 
             echo "<tr class='tab_bg_1'><td width='50%'>".__('Create survey after')."</td>";
             echo "<td>";
-            /*Dropdown::showNumber('inquest_delay', $inquest_delay, 1, 90, 1,
-                            array('0'    => __('As soon as possible')),
-                            array('unit' => 'day'));*/
+            
             Dropdown::showNumber('inquest_delay', [
               'value' => $inquest_delay,
               'min'   => 1,
@@ -195,9 +193,7 @@ class PluginCatsurveyCatsurvey extends CommonDBTM {
             echo "<tr class='tab_bg_1'>".
                  "<td>".__('Rate to trigger survey')."</td>";
             echo "<td>";
-            /*Dropdown::showNumber('inquest_rate', $inquest_rate, 10, 100, 10,
-                            array(0      => __('Disabled')),
-                            array('unit' => '%'));*/
+            
             Dropdown::showNumber('inquest_rate', [
               'value' => $inquest_rate,
               'min'   => 10,
@@ -209,9 +205,7 @@ class PluginCatsurveyCatsurvey extends CommonDBTM {
             echo "</td></tr>";
 
                 echo "<tr class='tab_bg_1'><td>". __('For tickets closed after')."</td>";
-#                 echo "<td>" . Html::convDateTime($max_closedate)."</td></tr>";
-                echo "<td>";
-                //Html::showDateTimeFormItem("max_closedate", $max_closedate, 1, true, true);
+                echo "<td>";                
                 Html::showDateTimeField("max_closedate",[
                   'value'=> $max_closedate,
                   'timestep' => 1,
