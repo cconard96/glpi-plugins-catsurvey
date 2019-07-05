@@ -2,7 +2,7 @@
 function plugin_catsurvey_install() {
     global $DB;
 
-    if (!TableExists("glpi_plugin_catsurvey_catsurveys")) {
+    if (!$DB->tableExists("glpi_plugin_catsurvey_catsurveys")) {
 
         // Création de la table
         $query = "CREATE TABLE glpi_plugin_catsurvey_catsurveys (
@@ -32,4 +32,3 @@ function plugin_catsurvey_uninstall() {
     }
     return true;
 }
-?>

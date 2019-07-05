@@ -1,10 +1,10 @@
 <?php
 // Version of the plugin
-define('PLUGIN_CATSURVEY_VERSION', "0.91");
+define('PLUGIN_CATSURVEY_VERSION', "9.4.2");
 // Minimal GLPI version, inclusive
-define ("PLUGIN_CATSURVEY_GLPI_MIN_VERSION", "0.85");
+define ("PLUGIN_CATSURVEY_GLPI_MIN_VERSION", "9.4");
 // Maximum GLPI version, exclusive
-define ("PLUGIN_CATSURVEY_GLPI_MAX_VERSION", "0.91");
+define ("PLUGIN_CATSURVEY_GLPI_MAX_VERSION", "9.5");
 
 function plugin_version_catsurvey() {
 
@@ -48,4 +48,4 @@ function plugin_init_catsurvey() {
     Plugin::registerClass('PluginCatsurveyCatsurvey', array('addtabon' => array('ITILCategory')));
 
 }
-?>
+

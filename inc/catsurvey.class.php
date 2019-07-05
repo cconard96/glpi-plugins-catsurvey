@@ -179,23 +179,45 @@ class PluginCatsurveyCatsurvey extends CommonDBTM {
 
             echo "<tr class='tab_bg_1'><td width='50%'>".__('Create survey after')."</td>";
             echo "<td>";
-            Dropdown::showInteger('inquest_delay', $inquest_delay, 1, 90, 1,
+            /*Dropdown::showNumber('inquest_delay', $inquest_delay, 1, 90, 1,
                             array('0'    => __('As soon as possible')),
-                            array('unit' => 'day'));
+                            array('unit' => 'day'));*/
+            Dropdown::showNumber('inquest_delay', [
+              'value' => $inquest_delay,
+              'min'   => 1,
+              'max' => 90,
+              'step' => 1,
+              'unit' => 'day',
+              'toadd' => [0 => __('As soon as possible')]
+            ]);
             echo "</td></tr>";
 
             echo "<tr class='tab_bg_1'>".
                  "<td>".__('Rate to trigger survey')."</td>";
             echo "<td>";
-            Dropdown::showInteger('inquest_rate', $inquest_rate, 10, 100, 10,
+            /*Dropdown::showNumber('inquest_rate', $inquest_rate, 10, 100, 10,
                             array(0      => __('Disabled')),
-                            array('unit' => '%'));
+                            array('unit' => '%'));*/
+            Dropdown::showNumber('inquest_rate', [
+              'value' => $inquest_rate,
+              'min'   => 10,
+              'max' => 100,
+              'step' => 10,
+              'unit' => '%',
+              'toadd' => [0 => __('Disabled')]
+            ]);
             echo "</td></tr>";
 
                 echo "<tr class='tab_bg_1'><td>". __('For tickets closed after')."</td>";
 #                 echo "<td>" . Html::convDateTime($max_closedate)."</td></tr>";
                 echo "<td>";
-                Html::showDateTimeFormItem("max_closedate", $max_closedate, 1, true, true);
+                //Html::showDateTimeFormItem("max_closedate", $max_closedate, 1, true, true);
+                Html::showDateTimeField("max_closedate",[
+                  'value'=> $max_closedate,
+                  'timestep' => 1,
+                  'maybeempty' => true,
+                  'canedit' => true,
+                ]);
                 echo "</td></tr>";
 
         }
@@ -221,4 +243,4 @@ class PluginCatsurveyCatsurvey extends CommonDBTM {
    }
 
 }
-?>
+
