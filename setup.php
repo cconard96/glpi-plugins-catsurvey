@@ -20,8 +20,8 @@ function plugin_version_catsurvey() {
 function plugin_catsurvey_check_prerequisites() {
 
     $success = true;
-    if (version_compare(GLPI_VERSION, PLUGIN_FORMCREATOR_GLPI_MIN_VERSION, 'lt')) {
-       echo 'This plugin requires GLPI >= ' . PLUGIN_FORMCREATOR_GLPI_MIN_VERSION . '<br>';
+    if (version_compare(GLPI_VERSION, PLUGIN_CATSURVEY_GLPI_MIN_VERSION, 'lt')) {
+       echo 'This plugin requires GLPI >= ' . PLUGIN_CATSURVEY_GLPI_MIN_VERSION . '<br>';
        $success = false;
     }
     return $success;
