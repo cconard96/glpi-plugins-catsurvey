@@ -13,7 +13,7 @@ function plugin_catsurvey_install() {
                     inquest_delay int(11) NOT NULL default '-10',
                     inquest_URL varchar(255) default NULL,
                     PRIMARY KEY (id)
-                ) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci";
+                ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci";
 
         $DB->queryOrDie($query, $DB->error());
     }
