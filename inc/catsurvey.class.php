@@ -42,8 +42,8 @@ class PluginCatsurveyCatsurvey extends CommonDBTM {
 
    public static function cronInfo($name) {
       switch ($name) {
-         case 'createinquestbycat' :
-               return ['description' => 'Génération des enquêtes de satisfaction par catégories'];
+         case 'createinquestbycat' :            
+               return ['description' => __('Generating satisfaction surveys by categories', 'catsurvey')];
       }
        return [];
    }
@@ -112,7 +112,7 @@ class PluginCatsurveyCatsurvey extends CommonDBTM {
    function getTabNameForItem(CommonGLPI $item, $withtemplate = 0) {
 
       if ($item->getType() == 'ITILCategory') {
-           return "Enquêtes";
+           return __("Satisfaction survey");
       }
        return '';
    }
