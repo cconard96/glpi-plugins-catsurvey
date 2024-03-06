@@ -2,15 +2,15 @@
    <name>Catsurvey</name>
    <key>catsurvey</key>
    <state>stable</state>
-   <logo>https://raw.githubusercontent.com/Probesys/glpi-plugins-catsurvey/github/pics/logo.png</logo>
+   <logo>https://github.com/Probesys/glpi-plugins-catsurvey/blob/main/pics/logo.png</logo>
    <description>
       <short>
-        <fr><![CDATA[Ce plugin permet de créer des enquêtes de satisfaction selon les catégories ITIL.]]></fr>
-        <en><![CDATA[This plugin allows to create satisfaction inquests by ITIL categories]]></en>
+        <fr>Ce plugin permet de créer des enquêtes de satisfaction selon les catégories ITIL</fr>
+        <en>This plugin allows to create satisfaction inquests by ITIL categories</en>
       </short>
       <long>
-        <fr><![CDATA[Ce plugin permet de créer des enquêtes de satisfaction selon les catégories ITIL.]]></fr>
-        <en><![CDATA[This plugin allows to create satisfaction inquests by ITIL categories]]></en>
+        <fr>Ce plugin permet de créer des enquêtes de satisfaction selon les catégories ITIL</fr>
+        <en>This plugin allows to create satisfaction inquests by ITIL categories</en>
       </long>
    </description>
    <homepage>https://github.com/Probesys/glpi-plugins-catsurvey</homepage>
@@ -26,14 +26,14 @@
       <version>
          <num>1.0.1</num>
          <compatibility>~10.0</compatibility>
-	 <download_url>https://github.com/Probesys/glpi-plugins-catsurvey/releases/download/v1.0.1/catsurvey-1.0.1.tbz</download_url>     
+	 <download_url>https://github.com/Probesys/glpi-plugins-catsurvey/releases/download/1.0.1/catsurvey-1.0.1.tbz</download_url>     
       </version>
    </versions>
    <langs>
       <lang>en_GB</lang>
       <lang>fr_FR</lang>
    </langs>
-   <license><![CDATA[AGPL v3+]]></license>
+   <license>AGPL v3+</license>
    <tags>
       <fr>
          <tag>Ticket</tag>
